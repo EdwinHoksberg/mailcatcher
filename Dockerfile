@@ -1,5 +1,5 @@
 FROM ruby:2.4-alpine
-MAINTAINER Samuel Cochran <sj26@sj26.com>
+MAINTAINER Edwin Hoksberg <mail@edwinhoksberg.nl>
 
 RUN apk add --no-cache gcc g++ make sqlite-dev nodejs
 
