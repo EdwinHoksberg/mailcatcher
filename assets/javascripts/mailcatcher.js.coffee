@@ -327,12 +327,8 @@ class MailCatcher
   subscribeWebSocket: ->
     secure = window.location.protocol is "https:"
     url = new URL("messages", document.baseURI)
-    console.log(url)
     url.protocol = if secure then "wss" else "ws"
-    console.log(url)
-    console.log(url.toString())
     @websocket = new WebSocket(url.toString())
-    console.log(@websocket)
     @websocket.onmessage = (event) =>
       @addMessage $.parseJSON event.data
 
